@@ -83,7 +83,16 @@ except: print("Palun sissesta ainult numbrid")
 # Küsi toote alghind. Kui alghind on üle 700 euro, arvuta hind 30% soodustusega. 
 # Muul juhul jääb hind samaks. Kuva lõplik hind kahe komakohaga.
 try:
-    hind=float(input("sissesta toote hind: "))
-    if hind > 700: print(f"teie on 30% soodus, hind on {hind-hind*0.3}")
-    else: print(f"hind on {hind}")
+    hind=round(float(input("sissesta toote hind: ")),2)
+    if hind > 700: print(f"teie on 30% soodus, hind on {hind-hind*0.3}€")
+    else: print(f"hind on {hind}€")
 except: print("sissesta hind numbriga")
+
+# Küsi toatemperatuur ja teata, kas see on üle 18 kraadi (soovitatav toasoojus talvel).
+# Temperatuur võib olla ka negatiivne või kümnendarv, seega kontrolli sisendit try/except abil.
+try:
+    temperatuur=int(input("Mis toatemperatuur on? "))
+    if temperatuur >= 18: print("temperatuur on okay")
+    else: print("tee temperatuur soojem")
+except: print("sissesta ainult täisarvud")
+
