@@ -145,19 +145,24 @@ import random
 # Kontrolli ka, et kõik pikkused on positiivsed.
 # Koosta programmi kohta plokkskeem ja salvesta see PNG-pildina programmiga samasse kausta.
 
-try:
-    kulg1=float(input("sissesta esimene kulg: "))
-    kulg2=float(input("sissesta teine kulg: "))
-    kulg3=float(input("sissesta kolmas kulg: "))
-    kulg4=float(input("sissesta neljas kulg: "))
-    if kulg1 < 0 or kulg2 < 0 or kulg3 < 0 or kulg4 < 0:
-        print("ära kirjutada negatiivne arved")
-    else:
-        if kulg1 == kulg2  == kulg3 == kulg4:
-            print("see on ruut")
-        else: print("see ei ole ruut")
-except: print("sissesta ")
+# try:
+#     kulg1=float(input("sissesta esimene kulg: "))
+#     kulg2=float(input("sissesta teine kulg: "))
+#     kulg3=float(input("sissesta kolmas kulg: "))
+#     kulg4=float(input("sissesta neljas kulg: "))
+#     if kulg1 < 0 or kulg2 < 0 or kulg3 < 0 or kulg4 < 0:
+#         print("ära kirjutada negatiivne arved")
+#     else:
+#         if kulg1 == kulg2  == kulg3 == kulg4:
+#             print("see on ruut")
+#         else: print("see ei ole ruut")
+# except: print("sissesta ")
 
 # Kasutaja sisestab kaks arvu. Seejärel küsib programm, millist tehet ta soovib (+, -, *, /), ja kuvab tulemuse.
 # Kui sisestatakse tundmatu tehtemärk, kuva veateade.
 # Nulliga jagamise korral kuva arusaadav teade, mitte veateade Pythonist.
+
+arv1=float(input("sissesta esimene arv: "))
+arv2=float(input("sissesta teine arv: "))
+tehet=input("mida sa tahab teha?(+, -, *, /) ")
+print(f"teie tegevus: {arv1} {tehet} {arv2} = {eval(arv1 tehet arv2)}")
