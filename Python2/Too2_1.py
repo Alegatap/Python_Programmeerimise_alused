@@ -122,29 +122,42 @@ import random
 # Toodete hinnad loo juhuslikult moodulist random, näiteks round(random.uniform(0.5, 3), 2).
 # Kui kasutaja soovib toodet osta, küsi kogus. Kontrolli, et kogus on täisarv (isdigit()).
 # Lõpus kuva tšekk: iga ostetud toote nimi, kogus, hind ja summa ning kõige all kogusumma.
-tooted=["piim","sai","leib","vorst"]
-kogusumma=0
-tsekk=""
-for toit in tooted:
-    valik=input(f"Kas tahate osta {toit}?").lower()
-    if valik == "jah":
-        toote_hind=round(random.uniform(0.5, 3), 2)
-        print(f"{toit} hind on {toote_hind}€")
-        try:
-            kogus=int(input("Kui palju tooted sa tahab osta? "))
-            lõpphind=round(toote_hind*kogus,2)
-            print(f"lõpphind on {lõpphind}€")
-            kogusumma=round(kogusumma+lõpphind,2)
-            tsekk=tsekk + f"{toit} {kogus}€  {lõpphind}€\n"
-        except: print("Sa kirjutasid hind vale formaatis, lähme edasi")
-    else: print(f"{toit} ei taha")
+# tooted=["piim","sai","leib","vorst"]
+# kogusumma=0
+# tsekk=""
+# for toit in tooted:
+#     valik=input(f"Kas tahate osta {toit}?").lower()
+#     if valik == "jah":
+#         toote_hind=round(random.uniform(0.5, 3), 2)
+#         print(f"{toit} hind on {toote_hind}€")
+#         try:
+#             kogus=int(input("Kui palju tooted sa tahab osta? "))
+#             lõpphind=round(toote_hind*kogus,2)
+#             print(f"lõpphind on {lõpphind}€")
+#             kogusumma=round(kogusumma+lõpphind,2)
+#             tsekk=tsekk + f"{toit} {kogus}€  {lõpphind}€\n"
+#         except: print("Sa kirjutasid hind vale formaatis, lähme edasi")
+#     else: print(f"{toit} ei taha")
 
-print(tsekk)
-print(f"kõik tooted kogu maksavad {kogusumma}€")
+# print(tsekk)
+# print(f"kõik tooted kogu maksavad {kogusumma}€")
 # Kasutaja sisestab nelinurga nelja külje pikkused. Programm teatab, kas tegemist saab olla ruuduga (kõik küljed on võrdsed).
 # Kontrolli ka, et kõik pikkused on positiivsed.
 # Koosta programmi kohta plokkskeem ja salvesta see PNG-pildina programmiga samasse kausta.
 
 try:
-    print()
+    kulg1=float(input("sissesta esimene kulg: "))
+    kulg2=float(input("sissesta teine kulg: "))
+    kulg3=float(input("sissesta kolmas kulg: "))
+    kulg4=float(input("sissesta neljas kulg: "))
+    if kulg1 < 0 or kulg2 < 0 or kulg3 < 0 or kulg4 < 0:
+        print("ära kirjutada negatiivne arved")
+    else:
+        if kulg1 == kulg2  == kulg3 == kulg4:
+            print("see on ruut")
+        else: print("see ei ole ruut")
 except: print("sissesta ")
+
+# Kasutaja sisestab kaks arvu. Seejärel küsib programm, millist tehet ta soovib (+, -, *, /), ja kuvab tulemuse.
+# Kui sisestatakse tundmatu tehtemärk, kuva veateade.
+# Nulliga jagamise korral kuva arusaadav teade, mitte veateade Pythonist.
