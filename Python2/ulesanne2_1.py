@@ -1,9 +1,9 @@
 import random
 from datetime import *
-# #1. Juku
-# # Programm küsib eesnime. Kui nimi on Juku, kuvatakse „Lähme Jukuga kinno!“, muidu teatatakse, et täna kinno ei minda.
-# # Programm peab Juku ära tundma ka siis, kui nimi on kirjutatud suurtähtedega (JUKU) või väiketähtedega (juku).
-# # Kui nimi on kirjutatud ainult suurtähtedega, lisa märkus „Ära karju, Juku!“.
+# # #1. Juku
+# # # Programm küsib eesnime. Kui nimi on Juku, kuvatakse „Lähme Jukuga kinno!“, muidu teatatakse, et täna kinno ei minda.
+# # # Programm peab Juku ära tundma ka siis, kui nimi on kirjutatud suurtähtedega (JUKU) või väiketähtedega (juku).
+# # # Kui nimi on kirjutatud ainult suurtähtedega, lisa märkus „Ära karju, Juku!“.
 
 nimi=input("Sissesta teie nimi: ")
 if nimi.lower() == "juku":
@@ -53,9 +53,9 @@ if valik == "jah":
     if not otsing: print(f"nimi mis algab tähtega {algustäht} ei leitud")
 else: print("otsingut ei tehta.")
 
-# # Küsi ristkülikukujulise toa pikkus ja laius ning arvuta põranda pindala.
-# # Seejärel küsi, kas kasutaja soovib remonti teha. Kui vastus on jaatav, küsi ruutmeetri hind ja arvuta põranda vahetamise hind.
-# # Lisaküsimus: kas kasutaja teeb remondi ise või kasutab professionaali abi?
+# Küsi ristkülikukujulise toa pikkus ja laius ning arvuta põranda pindala.
+# Seejärel küsi, kas kasutaja soovib remonti teha. Kui vastus on jaatav, küsi ruutmeetri hind ja arvuta põranda vahetamise hind.
+# Lisaküsimus: kas kasutaja teeb remondi ise või kasutab professionaali abi?
 # # Professionaali puhul küsi ka töö hind ruutmeetri kohta ja arvuta remondi koguhind koos tööga.
 print()
 try:
@@ -81,8 +81,8 @@ try:
     else: print("Sa ei taha remonti teha")
 except: print("Palun sissesta ainult numbrid")
 
-# # Küsi toote alghind. Kui alghind on üle 700 euro, arvuta hind 30% soodustusega. 
-# # Muul juhul jääb hind samaks. Kuva lõplik hind kahe komakohaga.
+# Küsi toote alghind. Kui alghind on üle 700 euro, arvuta hind 30% soodustusega. 
+# Muul juhul jääb hind samaks. Kuva lõplik hind kahe komakohaga.
 print()
 try:
     hind=round(float(input("sissesta toote hind: ")),2)
@@ -99,14 +99,15 @@ try:
     else: print("tee temperatuur soojem!")
 except: print("sissesta ainult täisarvud")
 
-# # Küsi inimese pikkus sentimeetrites ja teata, kas ta on lühike, keskmise pikkusega või pikk.
-# # Piirid pane ise paika ja kirjuta need programmi alguses kommentaarina.
-# # küsi lisaks sugu. Meestele ja naistele kehtivad erinevad piirid. Tingimusplokid võivad olla üksteise sees.
-# # Sugu võib sisestada mis tahes kujul (M, m, mees, MEES). Programm peab selle ära tundma.
-# # Kui sugu on sisestatud valesti, kuva veateade.
+# Küsi inimese pikkus sentimeetrites ja teata, kas ta on lühike, keskmise pikkusega või pikk.
+# Piirid pane ise paika ja kirjuta need programmi alguses kommentaarina.
+# küsi lisaks sugu. Meestele ja naistele kehtivad erinevad piirid. Tingimusplokid võivad olla üksteise sees.
+# Sugu võib sisestada mis tahes kujul (M, m, mees, MEES). Programm peab selle ära tundma.
+# Kui sugu on sisestatud valesti, kuva veateade.
 print()
 sugu=input("sisseta oma sugu: ")
-if sugu.lower() == "m" or "mees" or "n" or "naine":             #See on alati "True", ei tea miks. Kui sa kirjutad, et sugu on "1", ta ei teha ELSE
+print(sugu)
+if sugu.lower() == "m" or sugu.lower() == "mees" or sugu.lower() == "n" or sugu.lower() == "naine":             #See on alati "True", ei tea miks. Kui sa kirjutad, et sugu on "1", ta ei teha ELSE
      try:
          pikkus=int(input("sissesta teie pikkus(cm): "))
          if sugu == "m" or "mees":
